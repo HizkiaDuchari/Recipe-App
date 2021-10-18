@@ -1,1 +1,206 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
+/* Main style */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #C6FFDD; 
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); 
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: white;
+    width: 600px;
+    box-shadow: 0 0 50px 4px rgb(0, 0, 0, 0.7);
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input{
+    background-color: rgb(211, 211, 211);
+    border: none;
+    border-radius: 2px;
+    padding: 0.15rem;
+}
+
+header button{
+    background-color: transparent;
+    color: rgb(116, 113, 113);
+    border: none;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.fav-container{
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(240, 219, 161);
+}
+
+.fav-container h3{
+    margin-bottom: 1.5rem;
+}
+
+.fav-meals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    overflow: auto;
+    padding: 0;
+}
+
+.fav-meals li{
+    display: flex;
+    flex-direction: column;
+}
+
+.fav-meals li img{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px 5px #3333331a;
+    margin-bottom: 7px;
+}
+
+.fav-meals li span{
+    font-size: 1rem;
+}
+
+.meal{
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px #3333331a;
+    margin: 1.7rem;
+}
+
+.meal-header{
+    position: relative;
+}
+
+.meal-header .random{
+    font-size: 0.8rem;
+    position: absolute;
+    background-color: white;
+    top: 1.7rem;
+    left: 1rem;
+    padding: 4px 6px 4px 4px;
+    box-shadow: 0 0 10px 10px #3333331a;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.meal-header img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+.meal-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-text h4{
+    margin: 0;
+    display: flex;
+}
+
+.meal-text1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-text1 .favBtn{
+    margin-left: 10px;
+}
+
+.meal-text .favBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: rgb(177, 177, 177);
+}
+
+.meal-text2 .refreshBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: rgb(177, 177, 177);
+}
+
+.meal-text1 .favBtn.active{
+    color: rgb(247, 46, 146);
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.popup .close-popup {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.meal-info h1 {
+    text-align: center;
+}
